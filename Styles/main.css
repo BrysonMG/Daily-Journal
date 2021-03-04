@@ -1,6 +1,7 @@
 header {
     display: flex;
     background-color: cadetblue;
+    margin-bottom: 10px;
 }
 
 .header-text h1, .header-text h3{
@@ -11,4 +12,24 @@ header {
 
 header img {
     height: 100px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-container {
+    width: 60%;
+}
+
+aside{
+    width: 25%;
+    border: cadetblue solid 2px;
+    
 }
