@@ -21,24 +21,41 @@
         <div class="main-container">
             <div class="form-container">
                 <form>
-                    <label for="date">Date:</label>
-                    <input type="date" name="date" id="date">
-                    <br>
-                    <label for="concepts">Concepts Covered:</label>
-                    <input type="text" name="concepts" id="concepts">
-                    <br>
-                    <label for="entry">Entry:</label>
-                    <input type="textarea" name="entry" id="entry">
-                    <br>
-                    <label for="mood">Mood:</label>
-                    <input type="text" name="mood" id="mood">
-                    <br>
+                    <fieldset>
+                        <label for="date">Date:</label>
+                        <input type="date" name="date" id="date">
+                    </fieldset>
+                    <fieldset>
+                        <label for="concepts">Concepts Covered:</label>
+                        <input type="text" name="concepts" id="concepts">
+                    </fieldset>
+                    <fieldset>
+                        <label for="entry">Entry:</label>
+                        <textarea name="entry" id="entry" cols="30" rows="5"></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <label for="mood">Mood:</label>
+                        <select name="mood" id="mood">
+                            <option value="happy">Happy</option>
+                            <option value="sad">Sad</option>
+                            <option value="frustrated">Frustrated</option>
+                            <option value="hopeful">Hopeful</option>
+                            <option value="curious">Curious</option>
+                            <option value="other">Other</option>
+                            <option value="unknown">I'm not sure how I feel</option>
+                        </select>
+
+                    </fieldset>
                     <input type="submit" value="Submit">
                 </form>
             </div>
             <aside>
-                <!--Links to entries, most recent to oldest-->
+                <!-- Eventual goal, not sure exactly how to do yet -
+                    Links to entries as individual pages, most recent to oldest-->
             </aside>
+        </div>
+        <div class="entries">
+            
         </div>
     </main>
     <script type="module" src="Scripts/main.js"></script>
