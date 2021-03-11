@@ -1,37 +1,47 @@
 {
-    "entries": [
-        {
-            "id": 1,
-            "date": "07/24/2025",
-            "concept": "HTML & CSS",
-            "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-            "mood": "Ok"
-        },{
-            "id": 2,
-            "date": "07/26/2025",
-            "concept": "Complex Flexbox",
-            "entry": "I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
-            "mood": "Sad"
-        },{
-            "id": 3,
-            "date": "07/30/2025",
-            "concept": "Automating with Functions",
-            "entry": "We learned how to take data from from arrays/objects, convert it to html, and send it to the DOM",
-            "mood": "Great"
-        },{
-            "id": 4,
-            "date": "08/01/2025",
-            "concept": "Filtering",
-            "entry": "testing --- - - - --y s sru jshy s rx etah se",
-            "mood": "Great"
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "name": "Bryson",
-            "dateJoined": "03/06/2021",
-            "email": "bryson@me.com"
-        }
-    ]
+  "entries": [
+    {
+      "date": "2025-12-11",
+      "concept": "Testing 1",
+      "entry": "Test",
+      "mood": "curious",
+      "id": 5
+    },
+    {
+      "date": "2026-01-01",
+      "concept": "Posting to JSON",
+      "entry": "testing",
+      "mood": "curious",
+      "id": 6
+    },
+    {
+      "date": "2026-01-02",
+      "concept": "Testing 2",
+      "entry": "Testing",
+      "mood": "hopeful",
+      "id": 7
+    },
+    {
+      "date": "2026-01-03",
+      "concept": "Testing 3",
+      "entry": "Testing",
+      "mood": "unknown",
+      "id": 8
+    },
+    {
+      "date": "2026-01-04",
+      "concept": "Final Test?",
+      "entry": "Is it working as intended?",
+      "mood": "great",
+      "id": 9
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Bryson",
+      "dateJoined": "03/06/2021",
+      "email": "bryson@me.com"
+    }
+  ]
 }
