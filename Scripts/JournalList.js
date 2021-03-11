@@ -12,7 +12,7 @@ export const listEntries = () => {
             HTMLlist += entryAsHTML(eachEntry);
         }   
 
-    DOMselector.innerHTML += HTMLlist;
+    DOMselector.innerHTML = HTMLlist;
     })
 
 }
