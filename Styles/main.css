@@ -33,3 +33,19 @@ aside{
     border: cadetblue solid 2px;
     
 }
+
+.entries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.journalEntry {
+    border: cadetblue solid 2px;
+    border-radius: 25px;
+    background-color: lightsteelblue;
+    padding-left: 2em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    width: 45%;
+}

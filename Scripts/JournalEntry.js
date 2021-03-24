@@ -5,6 +5,8 @@ export const entryAsHTML = (entryObj) => {
         <h4>Mood: ${entryObj.mood}</h4>
         <p>${entryObj.entry}</p>
         <p>${entryObj.date}</p>
+        <button id="edit--${entryObj.id}">Edit</button>
+        <button id="delete--${entryObj.id}">Delete</button>
     </section>
     `
 }

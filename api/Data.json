@@ -1,39 +1,11 @@
 {
   "entries": [
     {
-      "date": "2025-12-11",
-      "concept": "Testing 1",
-      "entry": "Test",
-      "mood": "curious",
-      "id": 5
-    },
-    {
-      "date": "2026-01-01",
-      "concept": "Posting to JSON",
-      "entry": "testing",
-      "mood": "curious",
-      "id": 6
-    },
-    {
-      "date": "2026-01-02",
-      "concept": "Testing 2",
-      "entry": "Testing",
-      "mood": "hopeful",
-      "id": 7
-    },
-    {
-      "date": "2026-01-03",
-      "concept": "Testing 3",
-      "entry": "Testing",
-      "mood": "unknown",
-      "id": 8
-    },
-    {
-      "date": "2026-01-04",
-      "concept": "Final Test?",
-      "entry": "Is it working as intended?",
+      "date": "2021-03-24",
+      "concept": "Edit and Delete Entries",
+      "entry": "After a slight roadblock, I now have the edit and delete buttons working for each entry! EDIT: Edit Works!",
       "mood": "great",
-      "id": 9
+      "id": 1
     }
   ],
   "users": [
