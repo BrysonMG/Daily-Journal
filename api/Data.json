@@ -5,15 +5,48 @@
       "concept": "Edit and Delete Entries",
       "entry": "After a slight roadblock, I now have the edit and delete buttons working for each entry! EDIT: Edit Works!",
       "mood": "great",
+      "userId": 1,
       "id": 1
+    },
+    {
+      "date": "",
+      "concept": "",
+      "entry": "",
+      "mood": "happy",
+      "id": 2
+    },
+    {
+      "date": "",
+      "concept": "",
+      "entry": "",
+      "mood": "happy",
+      "id": 3
+    },
+    {
+      "date": "",
+      "concept": "",
+      "entry": "",
+      "mood": "happy",
+      "id": 4
+    },
+    {
+      "date": "",
+      "concept": "",
+      "entry": "",
+      "mood": "happy",
+      "id": 5
     }
   ],
   "users": [
     {
       "id": 1,
-      "name": "Bryson",
-      "dateJoined": "03/06/2021",
+      "username": "Bryson",
       "email": "bryson@me.com"
+    },
+    {
+      "username": "Test",
+      "email": "test@test.com",
+      "id": 2
     }
   ]
 }

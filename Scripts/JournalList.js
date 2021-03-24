@@ -6,7 +6,7 @@ const DOMselector = document.querySelector('.entries');
 export const listEntries = () => {
     getEntries()
     .then(response => {
-        let HTMLlist = '';
+        let HTMLlist = ``;
 
         for (const eachEntry of response) {
             HTMLlist += entryAsHTML(eachEntry);
