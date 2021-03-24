@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,46 +8,32 @@
     <title>Document</title>
     <link rel="stylesheet" href="Styles/main.css">
 </head>
+
 <body>
     <header>
-        <div class="image-container">
-            <img src="Images/logo.png" alt="logo">
+        <div class="logoTitleContainer">
+            <div class="header-text">
+                <h1>Daily Journal</h1>
+                <h3 id="usernameDisplay">Please Login or Register</h3>
+            </div>
         </div>
-        <div class="header-text">
-            <h1>Daily Journal</h1>
-            <h3>Bryson Goins</h3>
+        <div class="loginRegisterContainer">
+
         </div>
     </header>
     <main>
         <div class="main-container">
             <div class="form-container">
-                
+
             </div>
-            <aside>
-                <!-- Eventual goal, not sure exactly how to do yet -
-                    Links to entries as individual pages, most recent to oldest-->
-            </aside>
         </div>
-        <br>
-        <label for="filterMood" id="filterlabel">Only Show this mood</label>
-        <br>
-            <select name="filterMood" id="filterMood">
-                <option value="all">Show All</option>
-                <option value="happy">Happy</option>
-                <option value="great">Great</option>
-                <option value="ok">Ok</option>
-                <option value="sad">Sad</option>
-                <option value="frustrated">Frustrated</option>
-                <option value="hopeful">Hopeful</option>
-                <option value="curious">Curious</option>
-                <option value="other">Other</option>
-                <option value="unknown">I'm not sure how I feel</option>
-            </select>
+        
         <br>
         <div class="entries">
-            
+
         </div>
     </main>
     <script type="module" src="Scripts/main.js"></script>
 </body>
+
 </html>

@@ -29,6 +29,24 @@ const entryForm = () => {
     </fieldset>
     <input id="submit" type="submit" value="Submit">
 </form>
+<br>
+<div class="filterBox">
+            <label for="filterMood" id="filterlabel">Only Show this mood</label>
+            <br>
+            <select name="filterMood" id="filterMood">
+                <option value="all">Show All</option>
+                <option value="happy">Happy</option>
+                <option value="great">Great</option>
+                <option value="ok">Ok</option>
+                <option value="sad">Sad</option>
+                <option value="frustrated">Frustrated</option>
+                <option value="hopeful">Hopeful</option>
+                <option value="curious">Curious</option>
+                <option value="other">Other</option>
+                <option value="unknown">I'm not sure how I feel</option>
+            </select>
+        </div>
+    <br>
     `
 }
 
