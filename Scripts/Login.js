@@ -1,7 +1,7 @@
 let loggedInUser = {};
 
 export const useLoggedInUser = () => {
-    return {...loggedInUser}
+    return { ...loggedInUser }
 }
 
 export const setLoggedInUser = (userObj) => {
@@ -9,34 +9,48 @@ export const setLoggedInUser = (userObj) => {
 }
 
 export const registerUser = (userObj) => {
-    return fetch("http://localhost:8088/users", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(userObj)
-    })
-    .then(response=>response.json())
-    .then(parsedUser => {
-        setLoggedInUser(parsedUser);
-        return useLoggedInUser();
-    })
+    return fetch(`http://localhost:8088/users?email=${userObj.email}`)
+        .then(response => response.json())
+        .then(parsedUser => {
+            if (parsedUser.length > 0) {
+                alert('A user already exists with that email. Please choose another.')
+                return false
+            } else {
+                return true;
+            }
+        })
+        .then(response => {
+            if (response === true) {
+                return fetch("http://localhost:8088/users", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(userObj)
+                })
+                    .then(response => response.json())
+                    .then(parsedUser => {
+                        setLoggedInUser(parsedUser);
+                        return useLoggedInUser();
+                    })
+            }
+        })
 }
 
 export const loginUser = (userObj) => {
     return fetch(`http://localhost:8088/users?username=${userObj.username}&email=${userObj.email}`)
-    .then(response => response.json())
-    .then(parsedUser => {
-        //parsedUser comes back as an array
-        //if there was a match, the array will contain the user object
-        if (parsedUser.length > 0) {
-            setLoggedInUser(parsedUser[0]);
-            return useLoggedInUser();
-        } else {
-            //No matching user found
-            return false;
-        }
-    })
+        .then(response => response.json())
+        .then(parsedUser => {
+            //parsedUser comes back as an array
+            //if there was a match, the array will contain the user object
+            if (parsedUser.length > 0) {
+                setLoggedInUser(parsedUser[0]);
+                return useLoggedInUser();
+            } else {
+                //No matching user found
+                return false;
+            }
+        })
 }
 
 export const logoutUser = () => {
@@ -69,5 +83,5 @@ export const displayLogout = (currentUserObj) => {
     const DOMselect = document.querySelector(".loginRegisterContainer");
     DOMselect.innerHTML = `<button id="logoutBtn">Logout</button>`;
     const headerSelect = document.querySelector("#usernameDisplay");
-    headerSelect.innerHTML = `${currentUserObj.username}`;
+    headerSelect.innerHTML = `Hello ${currentUserObj.username}!`;
 }

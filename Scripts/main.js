@@ -1,5 +1,5 @@
 import { useAllEntries, createEntry, getSelectedEntry, updateEntry, deleteEntry } from './JournalData.js';
-import { listEntries } from './JournalList.js';
+import { listEntries, onlyUsersEntries } from './JournalList.js';
 import { entryAsHTML } from './JournalEntry.js';
 import { showEntryForm } from './EntryForm.js';
 import { EditForm } from './EditForm.js';
@@ -15,7 +15,7 @@ const filtered2HTML = (arr) => {
 }
 
 const showFilteredMoods = (mood) => {
-    const filtered = useAllEntries().filter(eachEntry => {
+    const filtered = onlyUsersEntries.filter(eachEntry => {
         if (eachEntry.mood === mood) {
             return eachEntry
         }
@@ -34,7 +34,7 @@ mainElement.addEventListener("change", e => {
 
         if (e.target.options[moodSelect].value === "all") {
             const entriesElement = document.querySelector(".entries");
-            entriesElement.innerHTML = filtered2HTML(useAllEntries());
+            entriesElement.innerHTML = filtered2HTML(onlyUsersEntries);
         } else {
             showFilteredMoods(e.target.options[moodSelect].value)
         }
@@ -44,16 +44,20 @@ mainElement.addEventListener("change", e => {
 mainElement.addEventListener("click", event => {
     event.preventDefault();
     if (event.target.id === "submit") {
+        const userObj = JSON.parse(sessionStorage.getItem("user"))
+
         const date = document.querySelector("input[name='date']").value;
         const concepts = document.querySelector("input[name='concepts']").value;
         const entry = document.querySelector("textarea[name='entry']").value;
         const mood = document.querySelector("select[name='mood']").value;
-//Add a userId property
+        const userId = userObj.id;
+
         const entryObj = {
             date: date,
             concept: concepts,
             entry: entry,
-            mood: mood
+            mood: mood,
+            userId: userId
         }
         createEntry(entryObj)
         .then(response => {
@@ -167,8 +171,10 @@ mainElement.addEventListener("click", event => {
                 showEntryForm();
                 //Eventually change listEntries for a function that only shows user's entries
                 listEntries();
+                location.reload();
             } else {
                 alert("Invalid user, try again or register a new account.")
+                displayLoginRegister()
             }
         })
     }
@@ -186,13 +192,16 @@ mainElement.addEventListener("click", event => {
 
         registerUser(userObject)
         .then(dbUserObj => {
+            if (dbUserObj) {
             sessionStorage.setItem("user", JSON.stringify(dbUserObj));
             const userObj = JSON.parse(sessionStorage.getItem("user"))
             displayLogout(userObj);
             showEntryForm();
-            //Eventually change listEntries for a function that only shows user's entries
-            listEntries();
-        })
+            location.reload();
+            } else {
+                displayLoginRegister();
+            }
+    })
     }
 })
 
@@ -202,6 +211,8 @@ mainElement.addEventListener("click", event => {
         logoutUser();
         sessionStorage.clear();
         checkForUser()
+        const headerSelect = document.querySelector("#usernameDisplay");
+        headerSelect.innerHTML = `Please Login or Register`;
         const DOMselect = document.querySelector("main");
         DOMselect.innerHTML = `
         <div class="main-container">

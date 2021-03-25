@@ -1,40 +1,20 @@
 {
   "entries": [
     {
-      "date": "2021-03-24",
-      "concept": "Edit and Delete Entries",
-      "entry": "After a slight roadblock, I now have the edit and delete buttons working for each entry! EDIT: Edit Works!",
-      "mood": "great",
-      "userId": 1,
-      "id": 1
-    },
-    {
       "date": "",
-      "concept": "",
-      "entry": "",
-      "mood": "happy",
+      "concept": "test",
+      "entry": "test",
+      "mood": "hopeful",
+      "userId": 2,
       "id": 2
     },
     {
-      "date": "",
-      "concept": "",
-      "entry": "",
+      "date": "2021-03-25",
+      "concept": "Login, Register, Logout",
+      "entry": "After a little bit of tinkering, I now have functionality for multiple users. Also, note that the only journal entries a user can read and filter through are their own.",
       "mood": "happy",
+      "userId": 1,
       "id": 3
-    },
-    {
-      "date": "",
-      "concept": "",
-      "entry": "",
-      "mood": "happy",
-      "id": 4
-    },
-    {
-      "date": "",
-      "concept": "",
-      "entry": "",
-      "mood": "happy",
-      "id": 5
     }
   ],
   "users": [
@@ -44,8 +24,8 @@
       "email": "bryson@me.com"
     },
     {
-      "username": "Test",
-      "email": "test@test.com",
+      "username": "test",
+      "email": "test",
       "id": 2
     }
   ]
